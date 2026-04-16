@@ -1,0 +1,45 @@
+{% extends 'core/base.html' %}
+
+{% block content %}
+
+<section class="hero">
+    <h1>Smart Inventory Management for Modern Businesses</h1>
+    <p>Track, manage, and grow your business effortlessly.</p>
+    <button onclick="window.location.href='/accounts/login'">Get Started</button>
+    <button onclick="window.location.href='#features'">Learn More</button>
+    <div class="hero-img"></div>
+</section>
+
+<section id="features" class="features">
+    <div class="featuresCard"><h2>Features</h2></div>
+    <div class="grid">
+        <div class="card">Inventory Tracking</div>
+        <div class="card">Low Stock Alerts</div>
+        <div class="card">Sales Management</div>
+        <div class="card">Analytics Dashboard</div>
+        <div class="card">Multi-user Support</div>
+    </div>
+</section>
+
+<section id="services" class="services">
+    <h2>Services</h2>
+    <div class="grid">
+        <div class="card">Cloud-based System</div>
+        <div class="card">Real-time Updates</div>
+        <div class="card">Secure Data</div>
+        <div class="card">Scalable</div>
+    </div>
+</section>
+
+<section id="contact" class="contact">
+    <h2>Contact Us</h2>
+    <form method="POST">
+        {% csrf_token %}
+        <input type="text" name="name" placeholder="Name" required>
+        <input type="email" name="email" placeholder="Email" required>
+        <textarea name="message"></textarea>
+        <button type="submit" class="sendbutton">Send</button>
+    </form>
+</section>
+
+{% endblock %}

@@ -1,0 +1,34 @@
+{% extends 'core/base.html' %}
+
+{% block content %}
+
+<div class="dashboard">
+
+    <h1>Dashboard</h1>
+
+    <div class="stats">
+        <div class="stat-card">Total Products: {{ total }}</div>
+        <div class="stat-card">Low Stock: {{ low_stock }}</div>
+    </div>
+
+    <a href="/dashboard/add/" class="add-btn">+ Add Product</a>
+
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Qty</th>
+            <th>Price</th>
+        </tr>
+
+        {% for product in products %}
+        <tr>
+            <td>{{ product.name }}</td>
+            <td>{{ product.quantity }}</td>
+            <td>{{ product.price }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+
+</div>
+
+{% endblock %}

@@ -1,0 +1,27 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>StockPilot</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+
+<nav class="navbar">
+    <div class="logo">StockPilot</div>
+    <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="#features">Features</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="/accounts/login">Login</a></li>
+        <li><a href="/accounts/register">Register</a></li>
+    </ul>
+</nav>
+
+{% block content %}{% endblock %}
+
+<script src="{% static 'js/script.js' %}"></script>
+</body>
+</html>

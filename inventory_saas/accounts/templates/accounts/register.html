@@ -1,0 +1,22 @@
+{% extends 'core/base.html' %}
+
+{% block content %}
+
+<div class="auth-container">
+    <form method="POST" class="auth-form">
+        {% csrf_token %}
+        
+        <h2>Create Account</h2>
+
+        <input type="text" name="username" placeholder="Username">
+        <input type="password" name="password" placeholder="Password">
+
+        <button type="submit">Register</button>
+
+        <p>Already have an account? 
+            <a href="/accounts/login/">Login</a>
+        </p>
+    </form>
+</div>
+
+{% endblock %}
