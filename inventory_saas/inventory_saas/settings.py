@@ -38,9 +38,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'inventory_saas.core.apps.CoreConfig',
-    'inventory_saas.accounts.apps.AccountsConfig',
-    'inventory_saas.dashboard.apps.DashboardConfig',
+    'core.apps.CoreConfig',
+    'accounts.apps.AccountsConfig',
+    'dashboard.apps.DashboardConfig',
 ]
 
 MIDDLEWARE = [
